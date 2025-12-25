@@ -17,66 +17,39 @@
   </head>
   <body>
     <header>
-      <nav class="nav_bar">
-        <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="g9.html">G9</a></li>
-          <li><a href="g10.html">G10</a></li>
-          <li><a href="g11.html">G11</a></li>
-          <li><a href="g12.html">G12</a></li>
-        </ul>
-      </nav>
+        <nav class="nav_bar">
+            <ul class="nav_link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="g9.html">G9</a></li>
+            <li><a href="g10.html">G10</a></li>
+            <li><a href="g11.html">G11</a></li>
+            <li><a href="g12.html">G12</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container1">
-      <div class="titleBar">
-        <!--Title and stuff incase we need em-->
-      </div>
-      <div class="container2">
-        <div class="subjects">
-          <div class="buttonBox">
-            <p>Hey</p>
-          </div>
-          <div class="buttonBox">
-            <p>Hey</p>
-          </div>
-          <div class="buttonBox">
-            <p>Hey</p>
-          </div>
+        <div class="titleBar">
+            <!--Title and stuff incase we need em-->
         </div>
-        <div class="mainContent">
-          <!--This is first option  -->
-          <!-- <iframe
-            style="width: 85%; height: 85%"
-            src="https://drive.google.com/file/d/1jeLN1wdfaagUeElg9cB5GalrBimdUIJN/preview"
-          ></iframe> -->
-
-          <!--This is second option  -->
-          <!-- <object
-            data="កំណែសេដ្ឋកិច្ចវិទ្យាថ្នាក់ទី_១១.pdf"
-            type="application/pdf"
-            width="100%"
-            height="600px"
-          >
-            <p>
-              Your browser doesn't support PDF viewing.
-              <a href="កំណែសេដ្ឋកិច្ចវិទ្យាថ្នាក់ទី_១១.pdf"
-                >Click here to download the PDF.</a
-              >
-            </p>
-          </object> -->
-
-          <iframe
-            src="pdfjs/web/viewer.html?file=../../កំណែសេដ្ឋកិច្ចវិទ្យាថ្នាក់ទី_១១.pdf"
-            width="100%"
-            height="600"
-            style="border: none;"
-          ></iframe>
-
+        <div class="container2">
+            <div class="subjects">
+                <div class="buttonBox" data-pdf="https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/South-East%20Asian/Austro-Asiatic/Khmer%2C%20Learn.pdf">
+                  <p>Hey</p>
+                </div>
+                <div class="buttonBox" data-pdf="https://fsi-languages.yojik.eu/languages/FSI/Cambodian/Basic/Volume%201/Fsi-CambodianBasicCourse-Volume1-StudentText.pdf">
+                  <p>Hey</p>
+                </div>
+                <div class="buttonBox" data-pdf="https://moeys.gov.kh/storage/uploads/documents/65bcc1a4d6ae8.pdf">
+                  <p>Hey</p>
+                </div>
+            </div>
+            <div class="mainContent">
+                <iframe id="pdfViewer"></iframe>
+            </div>
         </div>
-      </div>
     </div>
     <footer>
-      <!--footer content goes here-->
+        <!--footer content goes here-->
     </footer>
     <script src="scripting.js"></script>
   </body>
