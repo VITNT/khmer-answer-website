@@ -1,14 +1,60 @@
-* {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html, body {
+  height: 100%;
   margin: 0;
 }
 
-.nav_bar li {
-  list-style-type: none;
-  color: black;
-  padding: 8px 16px;
+body {
+  background-color: beige;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-  background-color: bisque;
+.nav_link {
+  display: none;
+}
+
+.nav_link.show {
+  display: block;
+}
+
+.nav_bar {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.nav_bar::before {
+  content: '\2630';
+  font-size: 25px;
+}
+
+.subjects {
+  position: relative;
+  width: 95%;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.subjects::before {
+  content: "Select Subject (CLICK ME)";
+}
+
+.buttonBox {
+  display: none;
+  width: 90%;
+  padding: 0.5vh 1vw 0.5vh 1vw;
+  margin: 10px auto;
+  background-color: yellow;
+}
+
+.subjects.open .buttonBox {
+  display: block;
+}
+
+.titleBar {
+    background-color: greenyellow;
 }
