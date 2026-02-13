@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ថ្នាក់ទី ១០ | Khmer Answer Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">ក</div>
+        <span class="nav__logo-text">Khmer<span>Answer</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle"
+        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">ទំព័រដើម</a></li>
+        <li><a href="g7.html" class="nav__link nav__link--grade">G7</a></li>
+        <li><a href="g8.html" class="nav__link nav__link--grade">G8</a></li>
+        <li><a href="g9.html" class="nav__link nav__link--grade">G9</a></li>
+        <li><a href="g10.html" class="nav__link nav__link--grade active">G10</a></li>
+        <li><a href="g11.html" class="nav__link nav__link--grade">G11</a></li>
+        <li><a href="g12.html" class="nav__link nav__link--grade">G12</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="viewer-layout">
+    <aside class="viewer-sidebar" id="sidebar">
+      <div class="viewer-sidebar__header">
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb__link">ទំព័រដើម</a>
+          <span class="breadcrumb__separator">/</span>
+          <span class="breadcrumb__current">ថ្នាក់ទី ១០</span>
+        </nav>
+        <h1 class="text-title">Grade 10</h1>
+        <p class="text-subtitle khmer">ថ្នាក់ទី ១០</p>
+      </div>
+      <div class="viewer-sidebar__content">
+        <div class="subjects__grid" style="display:flex;flex-direction:column;gap:var(--space-sm);">
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែគណិតវិទ្យាថ្នាក់ទី_១0_ភាគ_១_រឿង_សោភ័ណ្ឌ.pdf">
+            <div class="subject-card__icon">📐</div>
+            <h3 class="subject-card__title">គណិតវិទ្យា ភាគ ១</h3>
+            <p class="subject-card__subtitle">Mathematics Part 1</p>
+          </div>
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែគណិតវិទ្យាថ្នាក់ទី_១០_ភាគ_២_រឿង_សោភ័ណ្ឌ.pdf">
+            <div class="subject-card__icon">📐</div>
+            <h3 class="subject-card__title">គណិតវិទ្យា ភាគ ២</h3>
+            <p class="subject-card__subtitle">Mathematics Part 2</p>
+          </div>
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែគីមីវិទ្យាថ្នាក់ទី_១០_នុត_សក.pdf">
+            <div class="subject-card__icon">⚗️</div>
+            <h3 class="subject-card__title">គីមីវិទ្យា</h3>
+            <p class="subject-card__subtitle">Chemistry</p>
+          </div>
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែ_គីមីវិទ្យា_ថ្នាក់ទី_10_1997.pdf">
+            <div class="subject-card__icon">⚗️</div>
+            <h3 class="subject-card__title">គីមីវិទ្យា (១៩៩៧)</h3>
+            <p class="subject-card__subtitle">Chemistry (1997)</p>
+          </div>
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែជីវវិទ្យា_សៅ_សំអុល.pdf">
+            <div class="subject-card__icon">🧬</div>
+            <h3 class="subject-card__title">ជីវវិទ្យា</h3>
+            <p class="subject-card__subtitle">Biology</p>
+          </div>
+          <div class="subject-card"
+            data-pdf="pdfjs/web/viewer.html?file=../../answerPDF/g10/កំណែផែនដីនិងបរិស្ថានវិទ្យាថ្នាក់ទី_១០_លឹម_ចន្ទដារា.pdf">
+            <div class="subject-card__icon">🌍</div>
+            <h3 class="subject-card__title">ផែនដីនិងបរិស្ថានវិទ្យា</h3>
+            <p class="subject-card__subtitle">Earth & Env. Science</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="viewer-main">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state__icon">📚</div>
+        <h2 class="empty-state__title khmer">ជ្រើសរើសមុខវិជ្ជា</h2>
+        <p class="empty-state__text">Click on a subject to view</p>
+      </div>
+      <iframe id="pdfViewer" class="viewer-main__frame" style="display:none;"></iframe>
+    </main>
+    <button class="sidebar-toggle" id="sidebarToggle">📚</button>
+  </div>
+  <script src="scripting.js"></script>
+</body>
+
+</html>

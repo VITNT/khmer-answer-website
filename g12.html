@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="កំណែសៀវភៅគន្លឹះថ្នាក់ទី ៩ - Grade 12 Answer Keys">
+  <title>ថ្នាក់ទី ៩ | Khmer Answer Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">ក</div>
+        <span class="nav__logo-text">Khmer<span>Answer</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">ទំព័រដើម</a></li>
+        <li><a href="g7.html" class="nav__link nav__link--grade">G7</a></li>
+        <li><a href="g8.html" class="nav__link nav__link--grade">G8</a></li>
+        <li><a href="g9.html" class="nav__link nav__link--grade">G9</a></li>
+        <li><a href="g10.html" class="nav__link nav__link--grade">G10</a></li>
+        <li><a href="g11.html" class="nav__link nav__link--grade">G11</a></li>
+        <li><a href="g12.html" class="nav__link nav__link--grade active">G12</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Viewer Layout -->
+  <div class="viewer-layout">
+    <!-- Sidebar -->
+    <aside class="viewer-sidebar" id="sidebar">
+      <div class="viewer-sidebar__header">
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb__link">ទំព័រដើម</a>
+          <span class="breadcrumb__separator">/</span>
+          <span class="breadcrumb__current">ថ្នាក់ទី ១២</span>
+        </nav>
+        <h1 class="text-title" style="margin-bottom: var(--space-xs);">Grade 12</h1>
+        <p class="text-subtitle khmer">ថ្នាក់ទី ១២</p>
+      </div>
+      <div class="viewer-sidebar__content">
+        <div class="subjects__grid"
+          style="display: flex; flex-direction: column; gap: var(--space-sm); align-items: center; justify-content: center; min-height: 200px;">
+          <div class="empty-state">
+            <div class="empty-state__icon">🚧</div>
+            <h3 class="subject-card__title">កំពុងរៀបចំ</h3>
+            <p class="subject-card__subtitle">Coming Soon</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main PDF Viewer -->
+    <main class="viewer-main">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state__icon">📚</div>
+        <h2 class="empty-state__title khmer">ជ្រើសរើសមុខវិជ្ជា</h2>
+        <p class="empty-state__text">Click on a subject from the sidebar to view the answer key</p>
+      </div>
+      <iframe id="pdfViewer" class="viewer-main__frame" style="display: none;"></iframe>
+    </main>
+
+    <!-- Mobile sidebar toggle -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">📚</button>
+  </div>
+
+  <script src="scripting.js"></script>
+</body>
+
+</html>

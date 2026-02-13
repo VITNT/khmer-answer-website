@@ -1,35 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      media="screen and (min-width: 900px)"
-      href="bigScreen.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 900px)"
-      href="smallScreen.css"
-    />
-    <title>Khmer Answer Helper Site</title>
-  </head>
-  <body>
-    <header>
-        <nav class="nav_bar">
-            <ul class="nav_link">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="g9.html">G9</a></li>
-              <li><a href="g10.html">G10</a></li>
-              <li><a href="g11.html">G11</a></li>
-              <li><a href="g12.html">G12</a></li>
-            </ul>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ប្រមូលកំណែសៀវភៅគន្លឹះសម្រាប់សិស្សនិងគ្រូបង្រៀនខ្មែរ - Khmer Answer Library">
+  <title>ប្រមូលកំណែ | Khmer Answer Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">ក</div>
+        <span class="nav__logo-text">Khmer<span>Answer</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link active">ទំព័រដើម</a></li>
+        <li><a href="g7.html" class="nav__link nav__link--grade">G7</a></li>
+        <li><a href="g8.html" class="nav__link nav__link--grade">G8</a></li>
+        <li><a href="g9.html" class="nav__link nav__link--grade">G9</a></li>
+        <li><a href="g10.html" class="nav__link nav__link--grade">G10</a></li>
+        <li><a href="g11.html" class="nav__link nav__link--grade">G11</a></li>
+        <li><a href="g12.html" class="nav__link nav__link--grade">G12</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <div class="hero__overline">
+        <span class="text-overline">បណ្ណាល័យកំណែ</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-en">Your Study Companion</span>
+        <span class="hero__title-km">ប្រមូលកំណែសៀវភៅគន្លឹះ</span>
+      </h1>
+      <p class="hero__subtitle">ចូលទៅមើលកំណែសៀវភៅគន្លឹះសម្រាប់ថ្នាក់ទី ៧ ដល់ ១២ ដោយឥតគិតថ្លៃ។ Access free notebook
+        answer keys for grades 7-12.</p>
+      <div class="hero__cta">
+        <a href="#grades" class="btn btn--primary">រើសថ្នាក់របស់អ្នក</a>
+        <a href="#features" class="btn btn--secondary">ស្វែងយល់បន្ថែម</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Grade Selection -->
+  <section class="grades" id="grades">
+    <div class="container">
+      <div class="grades__header">
+        <span class="text-overline">ជ្រើសរើសថ្នាក់រៀន</span>
+        <h2 class="text-headline">Select Your Grade</h2>
+      </div>
+      <div class="grades__grid animate-stagger">
+        <a href="g7.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">7</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 7</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ៧</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 6 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+        <a href="g8.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">8</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 8</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ៨</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 6 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+        <a href="g9.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">9</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 9</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ៩</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 6 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+        <a href="g10.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">10</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 10</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ១០</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 6 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+        <a href="g11.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">11</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 11</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ១១</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 11 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+        <a href="g12.html" class="grade-card animate-fade-up">
+          <span class="grade-card__issue">12</span>
+          <span class="grade-card__label">Grade</span>
+          <h3 class="grade-card__title">Grade 12</h3>
+          <p class="grade-card__title-km">ថ្នាក់ទី ១២</p>
+          <div class="grade-card__meta">
+            <span class="grade-card__meta-item">📚 មុខវិជ្ជា</span>
+          </div>
+          <div class="grade-card__arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="grades__header">
+        <span class="text-overline">មុខងារ</span>
+        <h2 class="text-headline">Why Use Our Library</h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature">
+          <div class="feature__icon">📖</div>
+          <h3 class="feature__title">កំណែពេញលេញ</h3>
+          <p class="feature__text">Complete answer keys for all subjects from Grade 7 to 12</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🆓</div>
+          <h3 class="feature__title">ឥតគិតថ្លៃ</h3>
+          <p class="feature__text">Free access for all students and teachers</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">📱</div>
+          <h3 class="feature__title">ប្រើបានគ្រប់ឧបករណ៍</h3>
+          <p class="feature__text">Works perfectly on phones, tablets, and computers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon">ក</div>
+            <span class="footer__logo-text">KhmerAnswer</span>
+          </div>
+          <p class="footer__description">បណ្ណាល័យកំណែសម្រាប់សិស្ស និងគ្រូបង្រៀនខ្មែរ។</p>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4>ថ្នាក់រៀន</h4>
+            <a href="g7.html">Grade 7</a>
+            <a href="g8.html">Grade 8</a>
+            <a href="g9.html">Grade 9</a>
+          </div>
+          <div class="footer__nav-group">
+            <h4>​បន្ត​</h4>
+            <a href="g10.html">Grade 10</a>
+            <a href="g11.html">Grade 11</a>
+            <a href="g12.html">Grade 12</a>
+          </div>
         </nav>
-    </header>
-    <footer>
-      <!--Footer Contents Goes Here-->
-    </footer>
-    <script src="scripting.js"></script>
-  </body>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Khmer Answer Library</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripting.js"></script>
+</body>
+
 </html>
