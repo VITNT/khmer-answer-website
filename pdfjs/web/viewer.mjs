@@ -17647,6 +17647,7 @@ initCom(PDFViewerApplication);
 }
 {
   const HOSTED_VIEWER_ORIGINS = new Set(["null", "http://mozilla.github.io", "https://mozilla.github.io"]);
+  const ALLOWED_FILE_ORIGINS = new Set(["https://pub-da6c624e95274592baf8f2e6f7ce905d.r2.dev"]);
   var validateFileURL = function (file) {
     if (!file) {
       return;
@@ -17656,7 +17657,7 @@ initCom(PDFViewerApplication);
       return;
     }
     const fileOrigin = URL.parse(file, window.location)?.origin;
-    if (fileOrigin === viewerOrigin) {
+    if (fileOrigin === viewerOrigin || ALLOWED_FILE_ORIGINS.has(fileOrigin)) {
       return;
     }
     const ex = new Error("file origin does not match viewer's");
