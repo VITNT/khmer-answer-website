@@ -7,17 +7,40 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      // Drop the focus ring after a tap so the X has no lingering outline
+      // (keyboard users still get focus-visible when tabbing to it).
+      navToggle.blur();
     });
   }
 
   // Sidebar toggle (mobile on grade pages)
   const sidebarToggle = document.getElementById('sidebarToggle');
   const sidebar = document.getElementById('sidebar');
-  
+
+  // Backdrop that closes the sidebar when tapping outside it (mobile/tablet)
+  let sidebarOverlay = null;
+  if (sidebar) {
+    sidebarOverlay = document.createElement('div');
+    sidebarOverlay.className = 'sidebar-overlay';
+    document.body.appendChild(sidebarOverlay);
+  }
+
+  const closeSidebar = () => {
+    if (sidebar) sidebar.classList.remove('open');
+    if (sidebarOverlay) sidebarOverlay.classList.remove('open');
+  };
+  const openSidebar = () => {
+    if (sidebar) sidebar.classList.add('open');
+    if (sidebarOverlay) sidebarOverlay.classList.add('open');
+  };
+
   if (sidebarToggle && sidebar) {
     sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
     });
+  }
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
   }
 
   // Subject cards and PDF viewer
@@ -38,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (emptyState) emptyState.style.display = 'none';
         // Close sidebar on mobile
         if (sidebar && window.innerWidth <= 1024) {
-          sidebar.classList.remove('open');
+          closeSidebar();
         }
       });
     });
